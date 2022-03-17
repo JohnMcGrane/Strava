@@ -63,7 +63,7 @@ def job():
     full = full.loc[::-1].reset_index().drop(columns = ['index'])
     full.to_csv("out.csv")
 
-schedule.every().day.at("13:11").do(job)
+schedule.every().day.at("14:30").do(job)
 
 while True:
     schedule.run_pending()
