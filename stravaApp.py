@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from matplotlib.lines import Line2D
 import matplotlib
-import requests
 import streamlit as st
 
 st.set_page_config(layout="wide")
