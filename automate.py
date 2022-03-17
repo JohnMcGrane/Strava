@@ -4,11 +4,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
-import calendar
 from matplotlib.lines import Line2D
 import requests
 import urllib3
-import git
 
 def job():
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
