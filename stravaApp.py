@@ -79,7 +79,7 @@ def make_visualization(yearcount, array, years):
 	alpineski = 'azure'
 	canoe = 'midnightblue'
 	plt.style.use('fivethirtyeight')
-	fig, axs = plt.subplots(yearcount+1,figsize=(3*yearcount-3,4*yearcount))
+	fig, axs = plt.subplots(yearcount+1,figsize=(3*yearcount-3,5*yearcount))
 	plt.subplots_adjust(hspace=0.1)
 	for j in range(0,years.size):
 	    if j == years.size-1:
@@ -95,18 +95,18 @@ def make_visualization(yearcount, array, years):
 	    colors = {0.0:none,1.0:run, 2.0:ride, 3.0:nordicski, 
 	              4.0:hike, 5.0:alpineski, 6.0:canoe}
 	    
-	    axs[j].scatter(X.flatten(), abs(Y.flatten()-6), c=pd.Series(activities.flatten()).map(colors), s = 400)
+	    axs[j].scatter(X.flatten(), abs(Y.flatten()-6), c=pd.Series(activities.flatten()).map(colors), s = 800)
 	    axs[j].set_xlim(-1,53)
 	    axs[j].set_ylim(-1,7)
 	    axs[j].set_yticks(ticks = [6,5,4,3,2,1,0])
 	    axs[j].set_yticklabels(['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-	                           fontsize=20, color = 'w')
+	                           fontsize=25, color = 'w')
 	    axs[j].spines['top'].set_visible(False)
 	    axs[j].spines['right'].set_visible(False)
 	    axs[j].spines['bottom'].set_visible(False)
 	    axs[j].spines['left'].set_visible(False)
 	    axs[j].set_xticks(ticks = np.linspace(0,52,27))
-	    axs[j].set_xticklabels(labels = (np.linspace(0,52,27,dtype=int)),fontsize=16, color = 'w')
+	    axs[j].set_xticklabels(labels = (np.linspace(0,52,27,dtype=int)),fontsize=20, color = 'w')
 	custom_markers = [Line2D([0], [0], marker = "o", ms=22 , color=run, lw=0),
 	                Line2D([0], [0], marker = "o", ms=22 , color=ride, lw=0),
 	                Line2D([0], [0], marker = "o", ms=22 , color=hike, lw=0),
@@ -114,7 +114,7 @@ def make_visualization(yearcount, array, years):
 	                Line2D([0], [0], marker = "o", ms=22 , color=nordicski, lw=0),
 	                Line2D([0], [0], marker = "o", ms=22 , color=canoe, lw=0)]
 	plt.legend(custom_markers, ['Run', 'Ride', 'Hike','Alpine Ski','Nordic Ski','Canoe'],
-	                      loc=(0.03,yearcount+0.93),fontsize=20,labelcolor='w',facecolor='black')
+	                      loc=(0.03,yearcount+1.15),fontsize=25,labelcolor='w',facecolor='black')
 
 	#st.pyplot(fig, facecolor='black')
 	return fig
