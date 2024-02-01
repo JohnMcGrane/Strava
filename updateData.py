@@ -41,6 +41,12 @@ param = {'per_page': 200, 'page': 6}
 data6 = requests.get(activities_url, headers=header, params=param).json()
 param = {'per_page': 200, 'page': 7}
 data7 = requests.get(activities_url, headers=header, params=param).json()
+param = {'per_page': 200, 'page': 8}
+data8 = requests.get(activities_url, headers=header, params=param).json()
+param = {'per_page': 200, 'page': 9}
+data9 = requests.get(activities_url, headers=header, params=param).json()
+param = {'per_page': 200, 'page': 10}
+data10 = requests.get(activities_url, headers=header, params=param).json()
 
 pd.set_option('display.max_rows', None)
 a = pd.DataFrame(data1)
@@ -50,8 +56,11 @@ d = pd.DataFrame(data4)
 e = pd.DataFrame(data5)
 f = pd.DataFrame(data6)
 g = pd.DataFrame(data7)
+h = pd.DataFrame(data8)
+i = pd.DataFrame(data9)
+j = pd.DataFrame(data10)
 
-full = pd.concat([a,b,c,d,e,f,g], ignore_index=True)
+full = pd.concat([a,b,c,d,e,f,g,h,i,j], ignore_index=True)
 # two = pd.concat(c, ignore_index=True)
 # three = pd.concat(d, ignore_index=True)
 # four = pd.concat(e, ignore_index=True)
