@@ -1,5 +1,5 @@
 streamlit>=1.8.1
-click==8.0
+click=8
 matplotlib
 numpy
 pandas
