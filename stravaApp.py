@@ -67,7 +67,7 @@ else:
 	num = optsdict[opt1]
 	array = np.where(array1==num, array1, 0)
 
-#@st.cache(hash_funcs={matplotlib.figure.Figure: hash},suppress_st_warning=True)
+#@st.cache_data(hash_funcs={matplotlib.figure.Figure: hash},suppress_st_warning=True)
 @st.cache(allow_output_mutation=True,suppress_st_warning=True)
 def make_visualization(yearcount, array, years):
 	plt.rcParams['figure.facecolor'] = 'black'
