@@ -1,6 +1,6 @@
-streamlit>=1.8.1
-click=8
-matplotlib
-numpy
-pandas
-datetime
+//streamlit>=1.8.1
+//click=8
+//matplotlib
+//numpy
+//pandas
+//datetime
