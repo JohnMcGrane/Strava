@@ -8,7 +8,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-@st.cache(suppress_st_warning=True)
+@st.cache_data(suppress_st_warning=True)
 def import_data():
 	full = pd.read_csv('out.csv')
 	full['Miles'] = full['distance']*0.000621371
@@ -68,7 +68,7 @@ else:
 	array = np.where(array1==num, array1, 0)
 
 #@st.cache_data(hash_funcs={matplotlib.figure.Figure: hash},suppress_st_warning=True)
-@st.cache(allow_output_mutation=True,suppress_st_warning=True)
+@st.cache_data(allow_output_mutation=True,suppress_st_warning=True)
 def make_visualization(yearcount, array, years):
 	plt.rcParams['figure.facecolor'] = 'black'
 	none = 'black'
