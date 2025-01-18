@@ -39,7 +39,7 @@ def import_data():
 	        yearcount+=1
 	    if df['type'][i] == 'Run':
 	        array[yearcount,date.weekday(),date.week%53] = 1
-	    if df['type'][i] == 'Ride':
+	    if df['type'][i] == 'Ride' or df['type'][i] == 'VirtualRide':
 	        array[yearcount,date.weekday(),date.week%53] = 2
 	    if df['type'][i] == 'NordicSki':
 	        array[yearcount,date.weekday(),date.week%53] = 3
