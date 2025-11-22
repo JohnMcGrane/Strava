@@ -95,7 +95,7 @@ def make_visualization(yearcount, array, years):
 	    colors = {0.0:none,1.0:run, 2.0:ride, 3.0:nordicski, 
 	              4.0:hike, 5.0:alpineski, 6.0:canoe}
 	    
-	    axs[j].scatter(X.flatten(), abs(Y.flatten()-6), c=pd.Series(activities.flatten()).map(colors), s = 800)
+	    axs[j].scatter(X.flatten(), abs(Y.flatten()-6), c=pd.Series(activities.flatten()).map(colors), s = 750)
 	    axs[j].set_xlim(-1,53)
 	    axs[j].set_ylim(-1,7)
 	    axs[j].set_yticks(ticks = [6,5,4,3,2,1,0])
@@ -107,12 +107,12 @@ def make_visualization(yearcount, array, years):
 	    axs[j].spines['left'].set_visible(False)
 	    axs[j].set_xticks(ticks = np.linspace(0,52,27))
 	    axs[j].set_xticklabels(labels = (np.linspace(0,52,27,dtype=int)),fontsize=20, color = 'w')
-	custom_markers = [Line2D([0], [0], marker = "o", ms=16 , color=run, lw=0),
-	                Line2D([0], [0], marker = "o", ms=16 , color=ride, lw=0),
-	                Line2D([0], [0], marker = "o", ms=16 , color=hike, lw=0),
-	                Line2D([0], [0], marker = "o", ms=16 , color=alpineski, lw=0),
-	                Line2D([0], [0], marker = "o", ms=16 , color=nordicski, lw=0),
-	                Line2D([0], [0], marker = "o", ms=16 , color=canoe, lw=0)]
+	custom_markers = [Line2D([0], [0], marker = "o", ms=22 , color=run, lw=0),
+	                Line2D([0], [0], marker = "o", ms=22 , color=ride, lw=0),
+	                Line2D([0], [0], marker = "o", ms=22 , color=hike, lw=0),
+	                Line2D([0], [0], marker = "o", ms=22 , color=alpineski, lw=0),
+	                Line2D([0], [0], marker = "o", ms=22 , color=nordicski, lw=0),
+	                Line2D([0], [0], marker = "o", ms=22 , color=canoe, lw=0)]
 	plt.legend(custom_markers, ['Run', 'Ride', 'Hike','Alpine Ski','Nordic Ski','Canoe'],
 	                      loc=(0.03,yearcount+1.15),fontsize=25,labelcolor='w',facecolor='black')
 
