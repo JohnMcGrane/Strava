@@ -114,7 +114,7 @@ def make_visualization(yearcount, array, years):
 	                Line2D([0], [0], marker = "o", ms=22 , color=nordicski, lw=0),
 	                Line2D([0], [0], marker = "o", ms=22 , color=canoe, lw=0)]
 	plt.legend(custom_markers, ['Run', 'Ride', 'Hike','Alpine Ski','Nordic Ski','Canoe'],
-	                      loc=(0.02,yearcount+1.00),fontsize=25,labelcolor='w',facecolor='black')
+	                      loc=(0.02,yearcount+0.8),fontsize=25,labelcolor='w',facecolor='black')
 
 	#st.pyplot(fig, facecolor='black')
 	return fig
