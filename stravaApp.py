@@ -107,12 +107,12 @@ def make_visualization(yearcount, array, years):
 	    axs[j].spines['left'].set_visible(False)
 	    axs[j].set_xticks(ticks = np.linspace(0,52,27))
 	    axs[j].set_xticklabels(labels = (np.linspace(0,52,27,dtype=int)),fontsize=20, color = 'w')
-	custom_markers = [Line2D([0], [0], marker = "o", ms=22 , color=run, lw=0),
-	                Line2D([0], [0], marker = "o", ms=22 , color=ride, lw=0),
-	                Line2D([0], [0], marker = "o", ms=22 , color=hike, lw=0),
-	                Line2D([0], [0], marker = "o", ms=22 , color=alpineski, lw=0),
-	                Line2D([0], [0], marker = "o", ms=22 , color=nordicski, lw=0),
-	                Line2D([0], [0], marker = "o", ms=22 , color=canoe, lw=0)]
+	custom_markers = [Line2D([0], [0], marker = "o", ms=20 , color=run, lw=0),
+	                Line2D([0], [0], marker = "o", ms=20 , color=ride, lw=0),
+	                Line2D([0], [0], marker = "o", ms=20 , color=hike, lw=0),
+	                Line2D([0], [0], marker = "o", ms=20 , color=alpineski, lw=0),
+	                Line2D([0], [0], marker = "o", ms=20 , color=nordicski, lw=0),
+	                Line2D([0], [0], marker = "o", ms=20 , color=canoe, lw=0)]
 	plt.legend(custom_markers, ['Run', 'Ride', 'Hike','Alpine Ski','Nordic Ski','Canoe'],
 	                      loc=(0.03,yearcount+1.15),fontsize=25,labelcolor='w',facecolor='black')
 
