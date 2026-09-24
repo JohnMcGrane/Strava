@@ -2,3 +2,4 @@
 .DS_Store
 *.swp
 nohup.out
+updateData.py
